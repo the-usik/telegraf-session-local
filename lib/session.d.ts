@@ -10,8 +10,8 @@ declare module 'telegraf-session-local' {
     property?: string
     state?: TSession
     format?: {
-        serialize?: (value: TSession) => string
-        deserialize?: (value: string) => TSession
+      serialize?: (value: TSession) => string
+      deserialize?: (value: string) => TSession
     }
     getSessionKey?: (ctx: Context) => string
   }
@@ -31,5 +31,5 @@ declare module 'telegraf-session-local' {
     static get storageBase(): BaseAdapter
   }
 
-  export = LocalSession
+  export default LocalSession
 }
